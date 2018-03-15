@@ -1,1 +1,1 @@
-worker: python run_keras_server.py
+web: python run_keras_server.py
