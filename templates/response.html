@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{data['predictions'][0]["label"]}}</title>
+    </head>
+    <body background="/static/bk3.jpg">
+    	<h1><font color="green">Succes : {{data["success"]}}</font> </h1>
+    	<img src="{{data['image_url']}}" width="200" height="100">
+    	<p></p>
+    	<a target="_blank" href="https://www.google.com.ar/search?q={{data['predictions'][0]['label']}}"><font color="green">Search label in google</font></a>
+    	<a href="/"><font color="red">Go back </font></a>
+    	<h1><font color="green">Predictions: </font></h1>
+
+    	{% for prediction in data['predictions'] %}
+  			<h2><font color="green">Label: {{prediction["label"]}}</font></h2>
+  			<h3 style="text-indent: 2em;"><font color="green" face="verdana">Probability: {{prediction["probability"]}}</font></h3>
+		{% endfor %}
+		<p></p>
+		<p></p>
+		
+    </body>
+</html>
