@@ -23,7 +23,6 @@ from jinja2 import Template
 
 from flask import render_template, redirect, url_for
 
-from f_forms import EmailPasswordForm
 
 
 # initialize our Flask application and the Keras model
