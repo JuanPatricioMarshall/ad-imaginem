@@ -110,4 +110,4 @@ if __name__ == "__main__":
 	app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key"))
-	app.run(port=8000)
+	app.run(port=8000, host='0.0.0.0')
