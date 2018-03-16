@@ -5,8 +5,17 @@
 {% block body %}
     {{ super() }}
     <h3><font color="green">Paste image url</font></h3>
-    <form action="/predict" method="post"><font color="green">Image url:</font><br>
-  		<input type="text" name="image_url"><br>
+    <form action="/predict" method="post"><font color="green">Image url:</font>
+  		<input type="text" name="image_url">
   		<input type="submit" value="Submit">
-	</form> 
+	</form>
+
+
+	 <form action="/predict_p" method="post" enctype="multipart/form-data" >
+      <span class="btn btn-default btn-file">
+        <font color="green">Browse</font> <input type="file" name="image">
+      </span>
+
+    <font color="green"><input type="submit" value="Upload your image" class="btn btn-primary"></font>
+</form>
 {% endblock %}
