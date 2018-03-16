@@ -18,6 +18,7 @@ from flask import Flask, request
 import io
 import json
 from jinja2 import Template
+import os
 
 
 from flask import render_template, redirect, url_for
@@ -147,4 +148,5 @@ if __name__ == "__main__":
 	app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key"))
-	app.run()
+	port = int(os.environ.get("PORT", 33507))
+app.run(host='0.0.0.0', port=port)
