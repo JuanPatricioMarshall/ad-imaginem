@@ -36,9 +36,7 @@ def load_model():
 	# pre-trained on ImageNet and provided by Keras, but you can
 	# substitute in your own networks just as easily)
 	global model
-	print("LLEHUE")
 	model = ResNet50(weights="imagenet")
-	print("ME ESTOY POR IR")
 
 def prepare_image(image, target):
 	# if the image mode is not RGB, convert it
@@ -141,10 +139,7 @@ def index():
 if __name__ == "__main__":
 	print(("* Loading Keras model and Flask starting server..."
 		"please wait until server has fully started"))
-	#load_model()
-	global model
-	model = ResNet50(weights="imagenet")
-	print("Loaded")
+	load_model()
 	app.config.update(dict(
     SECRET_KEY="powerful secretkey",
     WTF_CSRF_SECRET_KEY="a csrf secret key"))
