@@ -81,7 +81,7 @@ pytz==2018.3
 pyxdg==0.25
 PyYAML==3.12
 QScintilla==2.10.3
-reportlab==3.3.0
+reportlab==3.5.55
 requests==2.18.4
 scipy==1.0.0
 sessioninstaller==0.0.0
